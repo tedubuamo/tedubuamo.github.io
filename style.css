@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #ffe3e3, #fff7f7);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.flower {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  animation: rotate 10s linear infinite;
+}
+
+.petal {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: pink;
+  border-radius: 50%;
+  transform-origin: bottom center;
+  opacity: 0.9;
+}
+
+.petal1 { transform: rotate(0deg) translateY(-40px); }
+.petal2 { transform: rotate(90deg) translateY(-40px); }
+.petal3 { transform: rotate(180deg) translateY(-40px); }
+.petal4 { transform: rotate(270deg) translateY(-40px); }
+
+.center {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: yellow;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h1 {
+  margin-top: 20px;
+  color: #d63384;
+  font-size: 2rem;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@media (max-width: 500px) {
+  .flower {
+    width: 100px;
+    height: 100px;
+  }
+
+  .petal {
+    width: 50px;
+    height: 50px;
+  }
+
+  .center {
+    width: 30px;
+    height: 30px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
