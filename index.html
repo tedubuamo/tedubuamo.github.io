@@ -3,17 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🌸 Date Checker 🌸</title>
+  <title>🌸 Our Happiness 19th 🌸</title>
   <link rel="stylesheet" href="css/index.css" />
   <link rel="shortcut icon" href="images/gift.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
+  <div class="floating-emojis">
+    <span>🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀🎀</span>
+    <span>💙💙💙💙💙💙💙💙💙💙💙💙💙💙💙💙💙💙💙</span>
+    <span>🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸</span>
+    <span>✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨</span>
+  </div>
+
   <div class="container">
-    <h1 class="title">🎀 Masukkan Tanggal Spesialmu 🎀</h1>
-    <input type="date" id="dateInput" />
+    <h1 class="title">🎀 Masukkan Tanggal Spesial Kita Sayang 🎀</h1>
+    <div class="otp-input">
+      <input type="text" maxlength="1" class="otp" id="d1">
+      <input type="text" maxlength="1" class="otp" id="d2">
+      <span>/</span>
+      <input type="text" maxlength="1" class="otp" id="m1">
+      <input type="text" maxlength="1" class="otp" id="m2">
+      <span>/</span>
+      <input type="text" maxlength="1" class="otp" id="y1">
+      <input type="text" maxlength="1" class="otp" id="y2">
+      <input type="text" maxlength="1" class="otp" id="y3">
+      <input type="text" maxlength="1" class="otp" id="y4">
+    </div>
     <button onclick="checkDate()">💌 Cek Tanggal</button>
     <p id="errorMessage"></p>
   </div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="audio/cute-music.mp3" type="audio/mpeg" />
+    Browser kamu nggak mendukung audio.
+  </audio>
 
   <script src="js/index.js"></script>
 </body>
