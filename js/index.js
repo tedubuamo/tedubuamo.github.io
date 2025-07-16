@@ -1,22 +1,12 @@
-const title = document.querySelector('.title')
-const text = `I Have Something`.split('')
+function checkDate() {
+  const dateInput = document.getElementById("dateInput").value;
+  const errorMessage = document.getElementById("errorMessage");
 
-// Create container for better responsive layout
-title.style.display = 'flex'
-title.style.flexWrap = 'wrap'
-title.style.justifyContent = 'center'
-title.style.gap = '0.5rem'
+  const correctDate = "2024-07-19"; // ganti sesuai tanggal kamu
 
-for (let index = 0; index < text.length; index++) {
-  if (text[index] !== ' ') {
-    title.innerHTML += `<span>${text[index]}</span>`
+  if (dateInput === correctDate) {
+    window.location.href = "flower.html";
   } else {
-    title.innerHTML += `<span style='width: 1rem'></span>`
+    errorMessage.textContent = "🌧️ Wah, tanggalnya belum tepat. Coba lagi ya!";
   }
 }
-
-const textElements = document.querySelectorAll('.title span');
-textElements.forEach((element) => {
-  const randomDelay = Math.random() * 3;
-  element.style.animationDelay = `${randomDelay}s`;
-});
