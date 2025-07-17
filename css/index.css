@@ -10,12 +10,12 @@ body {
 }
 
 .container {
+  width: 700px;
   text-align: center;
   background: #f0f8ff;
   padding: 35px;
   border-radius: 35px;
   box-shadow: 0 10px 25px rgba(0, 0, 255, 0.2);
-  width: 700px;
 }
 
 .title {
@@ -25,13 +25,13 @@ body {
 }
 
 input[type="date"] {
+  width: 100%;
   padding: 10px;
   font-size: 1rem;
+  margin-bottom: 15px;
   border: 2px solid rgb(0, 0, 255);
   border-radius: 10px;
   background-color: #e6f0ff;
-  margin-bottom: 15px;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -40,8 +40,8 @@ button {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 20px;
   font-size: 1rem;
+  border-radius: 20px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -57,7 +57,6 @@ button:hover {
 }
 
 .flower-page {
-  background:   linear-gradient(to bottom right, #d6f0ff, #eef8ff);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,16 +101,16 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   overflow: hidden;
+  pointer-events: none;
   z-index: 0;
 }
 
 .floating-emojis span {
   position: absolute;
-  animation: float 12s linear infinite;
   font-size: 2rem;
   opacity: 0.7;
+  animation: float 12s linear infinite;
   animation-delay: calc(-1s * var(--i));
   left: calc(10% * var(--i));
 }
