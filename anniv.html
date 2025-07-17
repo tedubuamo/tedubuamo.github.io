@@ -5,11 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🌷 Surprise Video 🌷</title>
   <link rel="stylesheet" href="css/index.css" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+.character-container {
+  position: relative;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.character-img {
+  width: 120px; 
+}
+
+.speech-bubble {
+  position: absolute;
+  top: -80px; /* posisi di atas gambar */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 2px 15px;
+  max-width: 500px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Tambahkan segitiga bawah kotak bicara */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+  </style>
 </head>
 <body class="flower-page">
+
   <video controls autoplay class="cute-video">
     <source src="images/Tanggal 19.mp4" type="video/mp4">
     Maaf, browser kamu tidak mendukung pemutar video.
   </video>
+
+  <div class="character-container">
+    <div class="speech-bubble">Happy Watching Sayangg 💌</div>
+    <img src="images/img_1.png" alt="karakter imut" class="character-img" />
+  </div>
+
 </body>
 </html>
